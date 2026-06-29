@@ -23,34 +23,34 @@ export default function ScreenPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between px-6 py-4 border-b border-[#2A2D35]">
+      <div className="flex items-center justify-between px-6 py-4 border-b border-[#E8E5E1]">
         <h1 className="text-xl font-bold">社区运营大屏 · <span className="text-warm">阳光花园社区</span> · 实时数据</h1>
         <div className="flex items-center gap-4 text-sm">
           <span className="flex items-center gap-1 text-fn-green"><BreathingDot /> 运行中</span>
-          <span className="text-[#B0B3BA] font-mono">{time}</span>
+          <span className="text-[#5C5C5C] font-mono">{time}</span>
         </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4 max-w-7xl mx-auto">
         {/* Elevators */}
         <div className="glass p-5">
-          <h3 className="text-sm font-semibold text-[#B0B3BA] mb-3 flex items-center gap-2">
+          <h3 className="text-sm font-semibold text-[#5C5C5C] mb-3 flex items-center gap-2">
             <ArrowUpDown className="w-4 h-4 text-warm" /> 电梯状态监控（实时）
           </h3>
           <div className="space-y-3">
             {elevators.map(e => (
-              <div key={e.name} className="flex items-center justify-between p-3 rounded-lg bg-[#0F1115]/40 border border-[#2A2D35]/50">
+              <div key={e.name} className="flex items-center justify-between p-3 rounded-lg bg-[#FAF8F5]/40 border border-[#E8E5E1]/50">
                 <div className="flex items-center gap-3">
                   <span className="text-sm font-medium">{e.name}</span>
                   <span className={`px-2 py-0.5 rounded text-xs ${e.status === 'normal' ? 'bg-fn-green/10 text-fn-green' : 'bg-fn-yellow/10 text-fn-yellow'}`}>
                     {e.status === 'normal' ? '正常' : '维修中'}
                   </span>
                 </div>
-                <div className="flex items-center gap-4 text-xs text-[#B0B3BA]">
+                <div className="flex items-center gap-4 text-xs text-[#5C5C5C]">
                   <span>{e.floor}F</span>
                   <span>{e.direction === 'up' ? '▲ 上行' : e.direction === 'down' ? '▼ 下行' : '— 停留'}</span>
-                  <span className="text-[#6B6F76]">{e.eta}</span>
-                  <BreathingDot color={e.status === 'normal' ? '#00C48C' : '#FFB800'} />
+                  <span className="text-[#8E8E8E]">{e.eta}</span>
+                  <BreathingDot color={e.status === 'normal' ? '#059669' : '#D97706'} />
                 </div>
               </div>
             ))}
@@ -59,13 +59,13 @@ export default function ScreenPage() {
 
         {/* Buildings */}
         <div className="glass p-5">
-          <h3 className="text-sm font-semibold text-[#B0B3BA] mb-3 flex items-center gap-2">
+          <h3 className="text-sm font-semibold text-[#5C5C5C] mb-3 flex items-center gap-2">
             <MapPin className="w-4 h-4 text-warm" /> 楼栋导航大屏
           </h3>
-          {[{ name: 'A栋', units: 286, status: '正常', color: '#00C48C', pct: 85 },
-            { name: 'B栋', units: 368, status: '维修中', color: '#FFB800', pct: 60 },
-            { name: 'C栋', units: 184, status: '畅通', color: '#00C48C', pct: 95 }].map(b => (
-            <div key={b.name} className="flex items-center justify-between p-3 rounded-lg bg-[#0F1115]/40 border border-[#2A2D35]/50 mb-2">
+          {[{ name: 'A栋', units: 286, status: '正常', color: '#059669', pct: 85 },
+            { name: 'B栋', units: 368, status: '维修中', color: '#D97706', pct: 60 },
+            { name: 'C栋', units: 184, status: '畅通', color: '#059669', pct: 95 }].map(b => (
+            <div key={b.name} className="flex items-center justify-between p-3 rounded-lg bg-[#FAF8F5]/40 border border-[#E8E5E1]/50 mb-2">
               <span className="text-sm font-medium">{b.name}</span>
               <div className="flex items-center gap-3 text-xs">
                 <span style={{ color: b.color }}>{b.units}户</span>
@@ -81,7 +81,7 @@ export default function ScreenPage() {
 
         {/* Micro Tasks */}
         <div className="glass p-5">
-          <h3 className="text-sm font-semibold text-[#B0B3BA] mb-3 flex items-center gap-2">
+          <h3 className="text-sm font-semibold text-[#5C5C5C] mb-3 flex items-center gap-2">
             <ClipboardList className="w-4 h-4 text-warm" /> 社区微任务
           </h3>
           <div className="flex gap-2 mb-3">
@@ -93,25 +93,25 @@ export default function ScreenPage() {
           </div>
           <div className="space-y-2 max-h-48 overflow-y-auto">
             {filteredTasks.map(t => (
-              <div key={t.id} className="flex items-center justify-between p-2 rounded-lg bg-[#0F1115]/40 text-xs">
+              <div key={t.id} className="flex items-center justify-between p-2 rounded-lg bg-[#FAF8F5]/40 text-xs">
                 <div className="flex items-center gap-2">
                   <span className="text-fn-green font-medium">{t.reward}</span>
                   <span>{t.typeName}</span>
-                  <span className="text-[#6B6F76]">{t.location}</span>
+                  <span className="text-[#8E8E8E]">{t.location}</span>
                 </div>
-                <div className="flex items-center gap-2 text-[#6B6F76]">
+                <div className="flex items-center gap-2 text-[#8E8E8E]">
                   <span>截{t.deadline}</span>
                   <span>{t.publisher}</span>
                 </div>
               </div>
             ))}
-            {filteredTasks.length === 0 && <div className="text-[#6B6F76] text-xs text-center py-4">暂无数据</div>}
+            {filteredTasks.length === 0 && <div className="text-[#8E8E8E] text-xs text-center py-4">暂无数据</div>}
           </div>
         </div>
 
         {/* Security Events */}
         <div className="glass p-5">
-          <h3 className="text-sm font-semibold text-[#B0B3BA] mb-3 flex items-center gap-2">
+          <h3 className="text-sm font-semibold text-[#5C5C5C] mb-3 flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-warm" /> 治安联盟监控
           </h3>
           <div className="flex items-center gap-4 mb-3 text-sm">
@@ -122,16 +122,16 @@ export default function ScreenPage() {
           </div>
           <div className="space-y-2 max-h-44 overflow-y-auto text-xs">
             {events.map((e, i) => (
-              <div key={i} className="flex items-start gap-2 p-2 rounded bg-[#0F1115]/30">
-                <span className="text-[#6B6F76] flex-shrink-0">{e.time}</span>
-                <span className="text-[#B0B3BA]">{e.text}</span>
+              <div key={i} className="flex items-start gap-2 p-2 rounded bg-[#FAF8F5]/30">
+                <span className="text-[#8E8E8E] flex-shrink-0">{e.time}</span>
+                <span className="text-[#5C5C5C]">{e.text}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="text-center py-4 text-xs text-[#6B6F76] border-t border-[#2A2D35]">
+      <div className="text-center py-4 text-xs text-[#8E8E8E] border-t border-[#E8E5E1]">
         ⚠️ 隐私模式已开启 — 本页为概念演示，居民手机号均脱敏，数据均为模拟，仅用于展示产品效果。
       </div>
     </div>
