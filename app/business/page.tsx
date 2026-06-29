@@ -1,7 +1,7 @@
 import { TrendingUp, Calculator } from 'lucide-react';
 import { revenue, costs, roadmap } from '@/lib/data';
 
-const ROADMAP_COLORS = ['#FF7A00', '#1890FF', '#00C48C'];
+const ROADMAP_COLORS = ['#D97706', '#2563EB', '#059669'];
 
 export default function BusinessPage() {
   return (
@@ -15,7 +15,7 @@ export default function BusinessPage() {
             {revenue.map(r => (
               <div key={r.title} className="flex items-start gap-3 p-2">
                 <span className="text-fn-green mt-0.5">●</span>
-                <div><div className="text-sm font-medium">{r.title}</div><div className="text-xs text-[#6B6F76]">{r.desc}</div></div>
+                <div><div className="text-sm font-medium">{r.title}</div><div className="text-xs text-[#8E8E8E]">{r.desc}</div></div>
               </div>
             ))}
           </div>
@@ -26,7 +26,7 @@ export default function BusinessPage() {
             {costs.map(c => (
               <div key={c.title} className="flex items-start gap-3 p-2">
                 <span className="text-fn-yellow mt-0.5">●</span>
-                <div><div className="text-sm font-medium">{c.title}</div><div className="text-xs text-[#6B6F76]">{c.desc}</div></div>
+                <div><div className="text-sm font-medium">{c.title}</div><div className="text-xs text-[#8E8E8E]">{c.desc}</div></div>
               </div>
             ))}
           </div>
@@ -40,7 +40,7 @@ export default function BusinessPage() {
           {[{ v: '20%+', d: '骑手提效与减负' }, { v: '2000万', d: '社区互助网络覆盖' }, { v: '98.5%', d: '治安辅助安全评分' }, { v: '∞', d: '弱势群体关怀（独居老人代接代办）' }].map(s => (
             <div key={s.d} className="p-3">
               <div className="text-warm text-2xl font-bold mb-1">{s.v}</div>
-              <div className="text-[#B0B3BA]">{s.d}</div>
+              <div className="text-[#5C5C5C]">{s.d}</div>
             </div>
           ))}
         </div>
@@ -53,7 +53,7 @@ export default function BusinessPage() {
           <div key={r.phase} className="glass p-5 relative">
             <div className="text-xs font-semibold mb-1" style={{ color: ROADMAP_COLORS[i] }}>{r.time}</div>
             <div className="text-lg font-bold mb-2" style={{ color: ROADMAP_COLORS[i] }}>{r.phase}</div>
-            <p className="text-[#B0B3BA] text-sm">{r.desc}</p>
+            <p className="text-[#5C5C5C] text-sm">{r.desc}</p>
           </div>
         ))}
       </div>
