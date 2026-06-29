@@ -52,9 +52,9 @@ export const levels: LevelInfo[] = [
 ];
 
 export const scoreDimensions: ScoreDimension[] = [
-  { name: '服务维度', pct: 40, score: 82, color: '#FF7A00', items: '准时率、好评率、微任务数、投诉负分' },
-  { name: '安全维度', pct: 30, score: 90, color: '#00C48C', items: '无犯罪记录、居住证、治安培训、AI行为风控' },
-  { name: '社区维度', pct: 30, score: 72, color: '#1890FF', items: '社区服务积分、居民点赞、志愿活动、异常上报' },
+  { name: '服务维度', pct: 40, score: 82, color: '#D97706', items: '准时率、好评率、微任务数、投诉负分' },
+  { name: '安全维度', pct: 30, score: 90, color: '#059669', items: '无犯罪记录、居住证、治安培训、AI行为风控' },
+  { name: '社区维度', pct: 30, score: 72, color: '#2563EB', items: '社区服务积分、居民点赞、志愿活动、异常上报' },
 ];
 
 export const pointTags: PointTag[] = [
