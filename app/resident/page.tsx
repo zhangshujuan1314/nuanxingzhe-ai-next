@@ -48,7 +48,7 @@ export default function ResidentPage() {
     <div className="flex page-split h-[calc(100vh-4rem)]">
       {/* Left: Phone */}
       <PhoneFrame>
-        <div className="px-4 py-2 text-sm text-[#B0B3BA]">
+        <div className="px-4 py-2 text-sm text-[#5C5C5C]">
           未登录 · <span className="text-warm font-medium">南苑花园</span>
         </div>
         <div className="flex-1 overflow-y-auto px-3 space-y-2">
@@ -57,25 +57,25 @@ export default function ResidentPage() {
               <div className="flex items-start justify-between">
                 <div>
                   <div className="text-sm font-medium">{o.shop}</div>
-                  <div className="text-xs text-[#6B6F76] mt-0.5">{o.addr}</div>
+                  <div className="text-xs text-[#8E8E8E] mt-0.5">{o.addr}</div>
                   <div className="text-xs text-fn-green mt-0.5">{o.eta}</div>
                 </div>
-                <span className={`text-xs px-2 py-0.5 rounded ${o.status === '配送中' ? 'bg-fn-green/10 text-fn-green' : 'bg-[#6B6F76]/10 text-[#6B6F76]'}`}>
+                <span className={`text-xs px-2 py-0.5 rounded ${o.status === '配送中' ? 'bg-fn-green/10 text-fn-green' : 'bg-[#8E8E8E]/10 text-[#8E8E8E]'}`}>
                   {o.status}
                 </span>
               </div>
             </div>
           ))}
         </div>
-        <div className="mx-3 my-2 h-28 bg-[#0F1115]/60 rounded-lg border border-[#2A2D35] relative overflow-hidden">
+        <div className="mx-3 my-2 h-28 bg-[#FAF8F5]/60 rounded-lg border border-[#E8E5E1] relative overflow-hidden">
           <svg viewBox="0 0 200 100" className="w-full h-full">
-            <rect x="0" y="40" width="200" height="20" fill="#1A1D23" stroke="#2A2D35" strokeWidth="0.5" />
-            <rect x="80" y="0" width="20" height="100" fill="#1A1D23" stroke="#2A2D35" strokeWidth="0.5" />
-            <rect x="20" y="10" width="40" height="25" rx="2" fill="#2A2D35" /><text x="40" y="26" textAnchor="middle" fill="#B0B3BA" fontSize="8">A座</text>
-            <rect x="20" y="65" width="40" height="25" rx="2" fill="#2A2D35" /><text x="40" y="81" textAnchor="middle" fill="#B0B3BA" fontSize="8">B座</text>
-            <rect x="140" y="55" width="45" height="30" rx="2" fill="#1A1D23" stroke="#1890FF" strokeWidth="2" /><text x="162" y="74" textAnchor="middle" fill="#1890FF" fontSize="9" fontWeight="bold">南苑</text>
-            <circle cx="155" cy="60" r="4" fill="#1890FF" opacity="0.8"><animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite" /></circle>
-            <circle cx="100" cy="50" r="3" fill="#FF7A00"><animate attributeName="cx" values="100;140;100" dur="4s" repeatCount="indefinite" /></circle>
+            <rect x="0" y="40" width="200" height="20" fill="#FFFFFF" stroke="#E8E5E1" strokeWidth="0.5" />
+            <rect x="80" y="0" width="20" height="100" fill="#FFFFFF" stroke="#E8E5E1" strokeWidth="0.5" />
+            <rect x="20" y="10" width="40" height="25" rx="2" fill="#E8E5E1" /><text x="40" y="26" textAnchor="middle" fill="#5C5C5C" fontSize="8">A座</text>
+            <rect x="20" y="65" width="40" height="25" rx="2" fill="#E8E5E1" /><text x="40" y="81" textAnchor="middle" fill="#5C5C5C" fontSize="8">B座</text>
+            <rect x="140" y="55" width="45" height="30" rx="2" fill="#FFFFFF" stroke="#2563EB" strokeWidth="2" /><text x="162" y="74" textAnchor="middle" fill="#2563EB" fontSize="9" fontWeight="bold">南苑</text>
+            <circle cx="155" cy="60" r="4" fill="#2563EB" opacity="0.8"><animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite" /></circle>
+            <circle cx="100" cy="50" r="3" fill="#D97706"><animate attributeName="cx" values="100;140;100" dur="4s" repeatCount="indefinite" /></circle>
           </svg>
         </div>
         <div className="px-3 pb-2">
@@ -85,27 +85,27 @@ export default function ResidentPage() {
       </PhoneFrame>
 
       {/* Right: AI Panel */}
-      <div className="flex-1 flex flex-col border-l border-[#2A2D35]">
-        <div className="flex items-center gap-3 px-5 py-4 border-b border-[#2A2D35]">
+      <div className="flex-1 flex flex-col border-l border-[#E8E5E1]">
+        <div className="flex items-center gap-3 px-5 py-4 border-b border-[#E8E5E1]">
           <Flame className="w-5 h-5 text-warm" />
           <span className="font-semibold">暖行者AI</span>
-          <span className="text-[#6B6F76] text-sm">我的外卖到哪了 / 设置暖接听 / 发布任务</span>
+          <span className="text-[#8E8E8E] text-sm">我的外卖到哪了 / 设置暖接听 / 发布任务</span>
         </div>
 
         <div ref={chatRef} className="flex-1 overflow-y-auto px-5 py-4 space-y-3">
           <div className="chat-bubble ai">欢迎体验居民端！我是您的社区智能助手 👋</div>
           <div className="glass p-4 space-y-2 mt-3">
             <div className="flex items-center gap-2 text-fn-green text-sm font-medium"><BreathingDot /> 暖接听已开启</div>
-            <div className="text-xs text-[#B0B3BA] space-y-1">
-              <div>AI 代理：<span className="text-white">暖行者AI</span></div>
-              <div>默认回复：<span className="text-white">"请放门口鞋柜"</span></div>
+            <div className="text-xs text-[#5C5C5C] space-y-1">
+              <div>AI 代理：<span className="text-[#141414]">暖行者AI</span></div>
+              <div>默认回复：<span className="text-[#141414]">"请放门口鞋柜"</span></div>
               <div>特殊条件：<span className="text-fn-yellow">无法按时接听时自动触发</span></div>
             </div>
           </div>
           {messages.map((msg, i) => <ChatBubble key={i} role={msg.role}>{msg.text}</ChatBubble>)}
         </div>
 
-        <div className="px-4 py-2 border-t border-[#2A2D35]/50">
+        <div className="px-4 py-2 border-t border-[#E8E5E1]/50">
           <div className="flex flex-wrap gap-2">
             {Object.keys(REPLIES).map(k => (
               <button key={k} className="quick-btn" onClick={() => quickReply(k)}>
@@ -115,10 +115,10 @@ export default function ResidentPage() {
           </div>
         </div>
 
-        <div className="px-4 py-3 border-t border-[#2A2D35] flex items-center gap-2">
-          <button className="text-[#6B6F76] hover:text-warm transition"><Mic className="w-5 h-5" /></button>
+        <div className="px-4 py-3 border-t border-[#E8E5E1] flex items-center gap-2">
+          <button className="text-[#8E8E8E] hover:text-warm transition"><Mic className="w-5 h-5" /></button>
           <input type="text" value={input} onChange={e => setInput(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleSend()}
-            placeholder="输入你想说的话…" className="flex-1 bg-[#0F1115] border border-[#2A2D35] rounded-lg px-3 py-2 text-sm text-white placeholder-[#6B6F76] outline-none focus:border-warm/50 transition" />
+            placeholder="输入你想说的话…" className="flex-1 bg-[#FAF8F5] border border-[#E8E5E1] rounded-lg px-3 py-2 text-sm text-[#141414] placeholder-[#8E8E8E] outline-none focus:border-warm/50 transition" />
           <button onClick={handleSend} className="text-warm hover:text-warm-light transition"><Send className="w-5 h-5" /></button>
         </div>
       </div>
