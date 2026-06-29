@@ -32,8 +32,8 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-16 bg-[#1A1D23]/80 backdrop-blur-md border-b border-[#2A2D35] flex items-center px-6">
-      <Link href="/" className="flex items-center gap-2 text-lg font-bold text-[#FF7A00] hover:text-[#FF9A3C] transition-colors no-underline">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-16 bg-[#FFFFFF]/80 backdrop-blur-md border-b border-[#E8E5E1] flex items-center px-6">
+      <Link href="/" className="flex items-center gap-2 text-lg font-bold text-[#D97706] hover:text-[#F59E0B] transition-colors no-underline">
         <Flame className="w-6 h-6" />
         <span>暖行者AI</span>
       </Link>
@@ -54,10 +54,10 @@ export default function NavBar() {
       </div>
 
       <div className="ml-auto flex items-center gap-2">
-        <span className="text-[#B0B3BA] text-sm">隐私模式</span>
+        <span className="text-[#5C5C5C] text-sm">隐私模式</span>
         <button
           onClick={togglePrivacy}
-          className={`w-11 h-6 rounded-full relative transition-colors ${privacyOn ? 'bg-[#FF7A00]' : 'bg-[#2A2D35]'}`}
+          className={`w-11 h-6 rounded-full relative transition-colors ${privacyOn ? 'bg-[#D97706]' : 'bg-[#E8E5E1]'}`}
           aria-label="隐私模式开关"
         >
           <span className={`absolute top-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform ${privacyOn ? 'translate-x-[22px]' : 'left-0.5'}`} />
