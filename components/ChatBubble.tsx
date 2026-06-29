@@ -53,9 +53,9 @@ function TypewriterBubble({ text }: { text: string }) {
 export function LoadingBubble() {
   return (
     <div className="chat-bubble ai flex gap-1 px-4 py-3">
-      <span className="w-1.5 h-1.5 rounded-full bg-[#6B6F76] animate-dot-pulse" />
-      <span className="w-1.5 h-1.5 rounded-full bg-[#6B6F76] animate-dot-pulse [animation-delay:0.2s]" />
-      <span className="w-1.5 h-1.5 rounded-full bg-[#6B6F76] animate-dot-pulse [animation-delay:0.4s]" />
+      <span className="w-1.5 h-1.5 rounded-full bg-[#8E8E8E] animate-dot-pulse" />
+      <span className="w-1.5 h-1.5 rounded-full bg-[#8E8E8E] animate-dot-pulse [animation-delay:0.2s]" />
+      <span className="w-1.5 h-1.5 rounded-full bg-[#8E8E8E] animate-dot-pulse [animation-delay:0.4s]" />
     </div>
   );
 }
